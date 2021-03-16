@@ -1,0 +1,58 @@
+<!--
+/**
+ * file: integers.html
+ * type: HyperTextMarkupLanguage
+ * author: karbytes
+ * date: 15_MARCH_2021
+ * license: PUBLIC_DOMAIN
+ */
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+ 	<title>INTEGERS</title>
+ 	<script src="integers.js"></script>
+</head>
+<body>
+	<h1>INTEGERS</h1>
+	<p>Click the button to test the functions defined in <strong>integers.js</strong>.</p>
+	<p><input type="button" value="TEST" onclick="test()"></p>
+	<div id="output"><p>???</p></div>
+	<script>
+		function test() {
+			let p0 = ('<' + 'p' + '>'), p1 = ('<' + '/' + 'p' + '>');
+			let output = document.getElementById("output");
+			let X = 0;
+			output.innerHTML = (p0 + "???" + p1);
+			output.innerHTML += (p0 + "is_exactly_one_argument() := " + is_exactly_one_argument() + "." + p1);
+			output.innerHTML += (p0 + 'is_exactly_one_argument("word") := ' + is_exactly_one_argument("word") + '.' + p1);
+			output.innerHTML += (p0 + 'is_exactly_one_argument("word","word") := ' + is_exactly_one_argument("word","word") + '.' + p1);
+			output.innerHTML += (p0 + 'is_exactly_one_argument("0") := ' + is_exactly_one_argument("0") + '.' + p1);
+			output.innerHTML += (p0 + "is_exactly_one_argument('0') := " + is_exactly_one_argument('0') + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_argument(0) := " + is_exactly_one_argument(0) + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_number_type_argument() := " + is_exactly_one_number_type_argument() + "." + p1);
+			output.innerHTML += (p0 + 'is_exactly_one_number_type_argument("0") := ' + is_exactly_one_number_type_argument("0") + '.' + p1);
+			output.innerHTML += (p0 + "is_exactly_one_number_type_argument('0') := " + is_exactly_one_number_type_argument('0') + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_number_type_argument(0) := " + is_exactly_one_number_type_argument(0) + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_number_type_argument(0,0) := " + is_exactly_one_number_type_argument(0,0) + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_number_type_argument(1) := " + is_exactly_one_number_type_argument(1) + "." + p1);
+			X = Math.random();
+			output.innerHTML += (p0 + "Math.random() := X := " + X + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_argument(X) := " + is_exactly_one_argument(X) + "." + p1);
+			output.innerHTML = (p0 + "is_exactly_one_number_type_argument(X) := " + is_exactly_one_number_type_argument(X) + "." + p1);
+			X *= 100;
+			output.innerHTML = (p0 + "X := (X * 100) := " + X + "." + p1);
+			X = round_down_to_nearest_integer(X);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_integer(X) := " + X + "." + p1);
+			X = round_down_to_nearest_absolute_value_integer(X);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(X)  := " + X + "." + p1);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(-3.14)  := " + round_down_to_nearest_absolute_value_integer(-3.14) + "." + p1);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(1.6)  := " + round_down_to_nearest_absolute_value_integer(1.6) + "." + p1);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(0)  := " + round_down_to_nearest_absolute_value_integer(0) + "." + p1);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer()  := " + round_down_to_nearest_absolute_value_integer() + "." + p1);
+			output.innerHTML = (p0 + "X := round_down_to_nearest_integer()  := " + round_down_to_nearest_integer() + "." + p1);
+		}
+	</script>
+</body>
+</html>
