@@ -1,27 +1,19 @@
 <hr>
-
-INTEGERS
-
+<p>INTEGERS</p>
+<hr>
+<p>The following simple &#8220;warm up&#8221; web page application implements a JavaScript file and an HTML5 file to manipulate countable data.</p>
 <hr>
 
-The following simple "warm up" web page application implements a JavaScript file and an HTML5 file to manipulate countable data.
+
+<figure class="wp-block-image size-large"><img data-attachment-id="6469" data-permalink="https://karlinaobject.wordpress.com/integers_html_screenshot/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png" data-orig-size="1600,1300" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_html_screenshot" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=1000" src="https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=1024" alt="" class="wp-image-6469" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=1024 1024w, https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=300 300w, https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png?w=768 768w, https://karlinaobject.files.wordpress.com/2021/03/integers_html_screenshot.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
 
 <hr>
-
-<!-- html -->
-
+<p><strong>HTML5 File (integers.html)</strong></p>
+<p>The HTML5 file defines the web page component of the web page application. It allows the end user to input a button click. In response to a button click, the web page implements a unit test function (which updates the web page with resulting static text).</p>
+<p>Web Page File Link: <strong><a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers.html</a></strong></p>
 <hr>
-
-<strong>HTML5 File (integers.html)</strong>
-
-The HTML5 file defines the web page component of the web application. It allows the end user to input a button click. In response to a button click, the web page implements a unit test function (which updates the web page with resulting static text).
-
-Web Page File Link: https://github.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/blob/main/integers.html
-
-<hr>
-
-<pre>
-/**
+<pre>/**
  * file: integers.js
  * type: JavaScript
  * author: karbytes
@@ -36,8 +28,8 @@ function is_exactly_one_argument(input) {
 function is_exactly_one_number_type_argument(input) {
 	// Note: The following erroneous web page output is what occurs if the commented out line of code is used.
 	// is_exactly_one_number_type_argument(0,0) := true. 
-	// return (is_exactly_one_argument(input) && (typeof arguments[0] === "number")) ? true : false;
-	return ((arguments.length === 1) && (typeof arguments[0] === "number")) ? true : false;
+	// return (is_exactly_one_argument(input) &amp;&amp; (typeof arguments[0] === "number")) ? true : false;
+	return ((arguments.length === 1) &amp;&amp; (typeof arguments[0] === "number")) ? true : false;
 }
 
 function round_down_to_nearest_integer(input) {
@@ -47,83 +39,56 @@ function round_down_to_nearest_integer(input) {
 
 function round_down_to_nearest_absolute_value_integer(input) {
 	if (!is_exactly_one_number_type_argument(input)) return 0;
-	input = (input > 0) ? input : ((-1) * input);
+	input = (input &gt; 0) ? input : ((-1) * input);
 	return Math.floor(input);
 }
 </pre>
+<hr>
+<p><strong>JavaScript File (integers.js)</strong></p>
+<p>The JavaScript file defines functions which determine whether or not exactly one discrete data value (i.e. datum) is being passed into a function as input and which convert function inputs into base-ten integer outputs.</p>
+<p>JavaScript File Link: <strong><a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers.js</a></strong></p>
+<hr>
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="6471" data-permalink="https://karlinaobject.wordpress.com/integers_web_page_input/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png" data-orig-size="479,200" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_web_page_input" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png?w=479" src="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png?w=479" alt="" class="wp-image-6471" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png 479w, https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_input.png?w=300 300w" sizes="(max-width: 479px) 100vw, 479px" /></figure>
+
 
 <hr>
 
-<strong>JavaScript File (integers.js)</strong>
 
-The JavaScript file defines functions which determine whether or not exactly one discrete data value (i.e. datum) is being passed into a function as input and which convert function inputs into base-ten integer outputs.
+<figure class="wp-block-image size-large"><img data-attachment-id="6473" data-permalink="https://karlinaobject.wordpress.com/integers_web_page_output/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png" data-orig-size="536,1209" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_web_page_output" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png?w=133" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png?w=454" src="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png?w=454" alt="" class="wp-image-6473" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png?w=454 454w, https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png?w=67 67w, https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png?w=133 133w, https://karlinaobject.files.wordpress.com/2021/03/integers_web_page_output.png 536w" sizes="(max-width: 454px) 100vw, 454px" /></figure>
 
-<hr> 
-
-<!-- input -->
 
 <hr>
-
-<!-- output -->
-
+<p>If the image above is unavailable, the text below is a verbatim copy of the textual output depicted by that image.</p>
 <hr>
-
-If the image above is unavailable, the text below is a verbatim copy of the textual output depicted by that image.
-
+<p>~~~</p>
+<p>is_exactly_one_argument() := false.</p>
+<p>is_exactly_one_argument(&#8220;word&#8221;) := true.</p>
+<p>is_exactly_one_argument(&#8220;word&#8221;,&#8221;word&#8221;) := false.</p>
+<p>is_exactly_one_argument(&#8220;0&#8221;) := true.</p>
+<p>is_exactly_one_argument(&#8216;0&#8217;) := true.</p>
+<p>is_exactly_one_argument(0) := true.</p>
+<p>is_exactly_one_argument(0,0) := false.</p>
+<p>is_exactly_one_argument(&#8216;word&#8217;,&#8217;word&#8217;) := false.</p>
+<p>is_exactly_one_argument(&#8216;word&#8217;) := true.</p>
+<p>is_exactly_one_number_type_argument() := false.</p>
+<p>is_exactly_one_number_type_argument(&#8220;0&#8221;) := false.</p>
+<p>is_exactly_one_number_type_argument(&#8216;0&#8217;) := false.</p>
+<p>is_exactly_one_number_type_argument(0) := true.</p>
+<p>is_exactly_one_number_type_argument(0,0) := false.</p>
+<p>is_exactly_one_number_type_argument(1) := true.</p>
+<p>Math.random() := X := 0.748187207575273.</p>
+<p>is_exactly_one_argument(X) := true.</p>
+<p>is_exactly_one_number_type_argument(X) := true.</p>
+<p>X := (X * 100) := 74.8187207575273.</p>
+<p>X := round_down_to_nearest_integer(X) := 74.</p>
+<p>X := round_down_to_nearest_absolute_value_integer(X) := 74.</p>
+<p>X := round_down_to_nearest_absolute_value_integer(-3.14) := 3.</p>
+<p>X := round_down_to_nearest_absolute_value_integer(1.6) := 1.</p>
+<p>X := round_down_to_nearest_absolute_value_integer(0) := 0.</p>
+<p>X := round_down_to_nearest_absolute_value_integer() := 0.</p>
+<p>X := round_down_to_nearest_integer() := 0.</p>
 <hr>
-
-~~~
-
-is_exactly_one_argument() := false.
-
-is_exactly_one_argument("word") := true.
-
-is_exactly_one_argument("word","word") := false.
-
-is_exactly_one_argument("0") := true.
-
-is_exactly_one_argument('0') := true.
-
-is_exactly_one_argument(0) := true.
-
-is_exactly_one_argument(0,0) := false.
-
-is_exactly_one_argument('word','word') := false.
-
-is_exactly_one_argument('word') := true.
-
-is_exactly_one_number_type_argument() := false.
-
-is_exactly_one_number_type_argument("0") := false.
-
-is_exactly_one_number_type_argument('0') := false.
-
-is_exactly_one_number_type_argument(0) := true.
-
-is_exactly_one_number_type_argument(0,0) := false.
-
-is_exactly_one_number_type_argument(1) := true.
-
-Math.random() := X := 0.748187207575273.
-
-is_exactly_one_argument(X) := true.
-
-is_exactly_one_number_type_argument(X) := true.
-
-X := (X * 100) := 74.8187207575273.
-
-X := round_down_to_nearest_integer(X) := 74.
-
-X := round_down_to_nearest_absolute_value_integer(X) := 74.
-
-X := round_down_to_nearest_absolute_value_integer(-3.14) := 3.
-
-X := round_down_to_nearest_absolute_value_integer(1.6) := 1.
-
-X := round_down_to_nearest_absolute_value_integer(0) := 0.
-
-X := round_down_to_nearest_absolute_value_integer() := 0.
-
-X := round_down_to_nearest_integer() := 0.
-
-<hr>
+<p>This page is current as of 15_MARCH_2021 and is licensed as <a href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a>.</p>
+<hr>	
