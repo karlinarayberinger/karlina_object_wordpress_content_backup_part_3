@@ -40,18 +40,18 @@
 			X = Math.random();
 			output.innerHTML += (p0 + "Math.random() := X := " + X + "." + p1);
 			output.innerHTML += (p0 + "is_exactly_one_argument(X) := " + is_exactly_one_argument(X) + "." + p1);
-			output.innerHTML = (p0 + "is_exactly_one_number_type_argument(X) := " + is_exactly_one_number_type_argument(X) + "." + p1);
+			output.innerHTML += (p0 + "is_exactly_one_number_type_argument(X) := " + is_exactly_one_number_type_argument(X) + "." + p1);
 			X *= 100;
-			output.innerHTML = (p0 + "X := (X * 100) := " + X + "." + p1);
+			output.innerHTML += (p0 + "X := (X * 100) := " + X + "." + p1);
 			X = round_down_to_nearest_integer(X);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_integer(X) := " + X + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_integer(X) := " + X + "." + p1);
 			X = round_down_to_nearest_absolute_value_integer(X);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(X)  := " + X + "." + p1);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(-3.14)  := " + round_down_to_nearest_absolute_value_integer(-3.14) + "." + p1);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(1.6)  := " + round_down_to_nearest_absolute_value_integer(1.6) + "." + p1);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer(0)  := " + round_down_to_nearest_absolute_value_integer(0) + "." + p1);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_absolute_value_integer()  := " + round_down_to_nearest_absolute_value_integer() + "." + p1);
-			output.innerHTML = (p0 + "X := round_down_to_nearest_integer()  := " + round_down_to_nearest_integer() + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_absolute_value_integer(X)  := " + X + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_absolute_value_integer(-3.14)  := " + round_down_to_nearest_absolute_value_integer(-3.14) + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_absolute_value_integer(1.6)  := " + round_down_to_nearest_absolute_value_integer(1.6) + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_absolute_value_integer(0)  := " + round_down_to_nearest_absolute_value_integer(0) + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_absolute_value_integer()  := " + round_down_to_nearest_absolute_value_integer() + "." + p1);
+			output.innerHTML += (p0 + "X := round_down_to_nearest_integer()  := " + round_down_to_nearest_integer() + "." + p1);
 		}
 	</script>
 </body>
