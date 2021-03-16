@@ -1,0 +1,79 @@
+<hr>
+
+INTEGERS
+
+<hr>
+
+The following simple "warm up" web page application implements a JavaScript file and an HTML5 file to manipulate countable data.
+
+<hr>
+
+<!-- html -->
+
+<hr>
+
+The HTML5 file defines the web page component of the web application. It allows the end user to input a button click. In response to a button click, the web page implements a unit test function (which updates the web page with resulting static text).
+
+<!-- output -->
+
+<hr>
+
+If the image above is unavailable, the text below is a verbatim copy of the textual output depicted by that image.
+
+<hr>
+
+~~~
+
+is_exactly_one_argument() := false.
+
+is_exactly_one_argument("word") := true.
+
+is_exactly_one_argument("word","word") := false.
+
+is_exactly_one_argument("0") := true.
+
+is_exactly_one_argument('0') := true.
+
+is_exactly_one_argument(0) := true.
+
+is_exactly_one_argument(0,0) := false.
+
+is_exactly_one_argument('word','word') := false.
+
+is_exactly_one_argument('word') := true.
+
+is_exactly_one_number_type_argument() := false.
+
+is_exactly_one_number_type_argument("0") := false.
+
+is_exactly_one_number_type_argument('0') := false.
+
+is_exactly_one_number_type_argument(0) := true.
+
+is_exactly_one_number_type_argument(0,0) := false.
+
+is_exactly_one_number_type_argument(1) := true.
+
+Math.random() := X := 0.748187207575273.
+
+is_exactly_one_argument(X) := true.
+
+is_exactly_one_number_type_argument(X) := true.
+
+X := (X * 100) := 74.8187207575273.
+
+X := round_down_to_nearest_integer(X) := 74.
+
+X := round_down_to_nearest_absolute_value_integer(X) := 74.
+
+X := round_down_to_nearest_absolute_value_integer(-3.14) := 3.
+
+X := round_down_to_nearest_absolute_value_integer(1.6) := 1.
+
+X := round_down_to_nearest_absolute_value_integer(0) := 0.
+
+X := round_down_to_nearest_absolute_value_integer() := 0.
+
+X := round_down_to_nearest_integer() := 0.
+
+<hr>
