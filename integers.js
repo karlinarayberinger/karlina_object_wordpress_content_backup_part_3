@@ -11,7 +11,10 @@ function is_exactly_one_argument(input) {
 }
 
 function is_exactly_one_number_type_argument(input) {
-	return (is_exactly_one_argument(input) && (typeof input === "number")) ? true : false;
+	// Note: The following erroneous web page output is what occurs if the commented out line of code is used.
+	// is_exactly_one_number_type_argument(0,0) := true. 
+	// return (is_exactly_one_argument(input) && (typeof arguments[0] === "number")) ? true : false;
+	return ((arguments.length === 1) && (typeof arguments[0] === "number")) ? true : false;
 }
 
 function round_down_to_nearest_integer(input) {
