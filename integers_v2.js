@@ -53,6 +53,7 @@ function unit_test_0() {
 	print_html_paragraph("is_nonnegative_integer(0) := " + is_nonnegative_integer(0) + ".");
 	print_html_paragraph("is_nonnegative_integer(1) := " + is_nonnegative_integer(1) + ".");
 	print_html_paragraph("is_nonnegative_integer(1.1) := " + is_nonnegative_integer(1.1) + ".");
+	print_html_paragraph("* * *");
 }
 
 function unit_test_1() {
@@ -68,4 +69,5 @@ function unit_test_1() {
 	print_html_paragraph("increment_natural_number(0) := " + increment_natural_number(0) + ".");
 	print_html_paragraph("increment_natural_number(1) := " + increment_natural_number(1) + ".");
 	print_html_paragraph("increment_natural_number(1.1) := " + increment_natural_number(1.1) + ".");
+	print_html_paragraph("* * *");
 }
