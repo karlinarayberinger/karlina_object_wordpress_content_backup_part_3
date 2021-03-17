@@ -19,7 +19,7 @@ function print_html_paragraph(s) {
 		// Define the closing paragraph HTML element tag.
 		let p1 = ('<' + '/' + 'p' + '>');
 
-		// Declare an empty object variable for representing the DIV web page element whose identifier is "output".
+		// Declare an empty Object type variable for representing the DIV web page element whose identifier is "output".
 		let output_html_element = {};
 
 		// If the DIV web page element whose identifier is "output" does not appear to contain String content, then throw an exception (i.e. error) to normal functioning.
