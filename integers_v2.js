@@ -71,3 +71,19 @@ function unit_test_1() {
 	print_html_paragraph("increment_natural_number(1.1) := " + increment_natural_number(1.1) + ".");
 	print_html_paragraph("* * *");
 }
+
+function unit_test_2() {
+	print_html_paragraph("increment_natural_number(0) := " + increment_natural_number(0) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(0)) := " + increment_natural_number(increment_natural_number(0)) + ".");
+	print_html_paragraph("increment_natural_number(1) := " + increment_natural_number(1));
+	print_html_paragraph("increment_natural_number(increment_natural_number(1)) := " + increment_natural_number(increment_natural_number(1)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(2)) := " + increment_natural_number(increment_natural_number(2)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(3)) := " + increment_natural_number(increment_natural_number(3)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(4)) := " + increment_natural_number(increment_natural_number(4)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(5)) := " + increment_natural_number(increment_natural_number(5)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(6)) := " + increment_natural_number(increment_natural_number(6)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(7)) := " + increment_natural_number(increment_natural_number(7)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(8)) := " + increment_natural_number(increment_natural_number(8)) + ".");
+	print_html_paragraph("increment_natural_number(increment_natural_number(9)) := " + increment_natural_number(increment_natural_number(9)) + ".");
+	print_html_paragraph("* * *");
+}
