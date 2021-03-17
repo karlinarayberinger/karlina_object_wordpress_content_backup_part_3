@@ -97,7 +97,7 @@ function print_html_paragraph(s) {
 		if (typeof arguments[0] !== "string") throw "s must represent a string type datum.";
 		if (s.length &gt; 999) throw "s exceeded 999 characters in length.";
 		output_html_element = document.getElementById("output");
-		if (s.length === 0) throw (p0 + ". . ." + p1);
+		if (s.length === 0) output_html_element.innerHTML += (p0 + ". . ." + p1);
 		output_html_element.innerHTML += (p0 + s + p1);
 	}
 	catch(error) {
