@@ -20,7 +20,7 @@
 <hr>
 
 
-<figure class="wp-block-image size-large"><img data-attachment-id="6546" data-permalink="https://karlinaobject.wordpress.com/integers_v2_interface_final/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png" data-orig-size="759,1857" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_v2_interface_final" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png?w=123" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png?w=419" src="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png?w=419" alt="" class="wp-image-6546" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png?w=419 419w, https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png?w=61 61w, https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png?w=123 123w, https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_final.png 759w" sizes="(max-width: 419px) 100vw, 419px" /></figure>
+<figure class="wp-block-image size-large"><img data-attachment-id="6559" data-permalink="https://karlinaobject.wordpress.com/integers_v2_interface_result/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png" data-orig-size="635,1521" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_v2_interface_result" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png?w=125" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png?w=428" src="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png?w=428" alt="" class="wp-image-6559" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png?w=428 428w, https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png?w=63 63w, https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png?w=125 125w, https://karlinaobject.files.wordpress.com/2021/03/integers_v2_interface_result.png 635w" sizes="(max-width: 428px) 100vw, 428px" /></figure>
 
 
 <hr>
@@ -38,7 +38,7 @@
 <p>is_nonnegative_integer(1) := true.</p>
 <p>is_nonnegative_integer(1.1) := false.</p>
 <p>* * *</p>
-<p>increment_natural_number():= 1</p>
+<p>increment_natural_number():= 1.</p>
 <p>increment_natural_number(true) := 1.</p>
 <p>increment_natural_number(false) := 1.</p>
 <p>increment_natural_number(&#8216;a&#8217;) := 1.</p>
@@ -53,7 +53,7 @@
 <p>* * *</p>
 <p>increment_natural_number(0) := 1.</p>
 <p>increment_natural_number(increment_natural_number(0)) := 2.</p>
-<p>increment_natural_number(1) := 2</p>
+<p>increment_natural_number(1) := 2.</p>
 <p>increment_natural_number(increment_natural_number(1)) := 3.</p>
 <p>increment_natural_number(increment_natural_number(2)) := 4.</p>
 <p>increment_natural_number(increment_natural_number(3)) := 5.</p>
@@ -64,7 +64,6 @@
 <p>increment_natural_number(increment_natural_number(8)) := 10.</p>
 <p>increment_natural_number(increment_natural_number(9)) := 11.</p>
 <p>* * *</p>
-<p>increment_natural_number():= 1</p>
 <hr>
 <p><strong>Web Page File (integers_v2.html)</strong></p>
 <p><strong><a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v2.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v2.html</a></strong></p>
@@ -137,7 +136,7 @@ function unit_test_0() {
 }
 
 function unit_test_1() {
-	print_html_paragraph("increment_natural_number():= " + increment_natural_number());
+	print_html_paragraph("increment_natural_number():= " + increment_natural_number() + ".");
 	print_html_paragraph("increment_natural_number(true) := " + increment_natural_number(true) + ".");
 	print_html_paragraph("increment_natural_number(false) := " + increment_natural_number(false) + ".");
 	print_html_paragraph("increment_natural_number('a') := " + increment_natural_number('a') + ".");
@@ -155,7 +154,7 @@ function unit_test_1() {
 function unit_test_2() {
 	print_html_paragraph("increment_natural_number(0) := " + increment_natural_number(0) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(0)) := " + increment_natural_number(increment_natural_number(0)) + ".");
-	print_html_paragraph("increment_natural_number(1) := " + increment_natural_number(1));
+	print_html_paragraph("increment_natural_number(1) := " + increment_natural_number(1) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(1)) := " + increment_natural_number(increment_natural_number(1)) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(2)) := " + increment_natural_number(increment_natural_number(2)) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(3)) := " + increment_natural_number(increment_natural_number(3)) + ".");
