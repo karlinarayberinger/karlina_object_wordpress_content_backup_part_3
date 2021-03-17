@@ -57,7 +57,7 @@ function unit_test_0() {
 }
 
 function unit_test_1() {
-	print_html_paragraph("increment_natural_number():= " + increment_natural_number());
+	print_html_paragraph("increment_natural_number():= " + increment_natural_number() + ".");
 	print_html_paragraph("increment_natural_number(true) := " + increment_natural_number(true) + ".");
 	print_html_paragraph("increment_natural_number(false) := " + increment_natural_number(false) + ".");
 	print_html_paragraph("increment_natural_number('a') := " + increment_natural_number('a') + ".");
@@ -75,7 +75,7 @@ function unit_test_1() {
 function unit_test_2() {
 	print_html_paragraph("increment_natural_number(0) := " + increment_natural_number(0) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(0)) := " + increment_natural_number(increment_natural_number(0)) + ".");
-	print_html_paragraph("increment_natural_number(1) := " + increment_natural_number(1));
+	print_html_paragraph("increment_natural_number(1) := " + increment_natural_number(1) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(1)) := " + increment_natural_number(increment_natural_number(1)) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(2)) := " + increment_natural_number(increment_natural_number(2)) + ".");
 	print_html_paragraph("increment_natural_number(increment_natural_number(3)) := " + increment_natural_number(increment_natural_number(3)) + ".");
