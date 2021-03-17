@@ -6,44 +6,42 @@
  * license: PUBLIC_DOMAIN
  */
 
+/**
+ * Append a new paragraph, s, to the textual content displayed inside of the DIV web page element whose identifier is "output".
+ * @param {String} s is assumed to be a nonempty sequence of textual characters no longer than 999 characters.
+ */
 function print_html_paragraph(s) {
+	// Use a try-catch block to respond to specific runtime errors (i.e. exception handling).
 	try {
+		// Define the opening paragraph HTML element tag.
 		let p0 = ('<' + 'p' + '>');
+
+		// Define the closing paragraph HTML element tag.
 		let p1 = ('<' + '/' + 'p' + '>');
+
+		// Declare an empty object variable for representing the DIV web page element whose identifier is "output".
 		let output_html_element = {};
-		if (typeof document.getElementById("output").innerHTML !== "string") {
-			throw "missing output web page element.";
-		}
-		if (arguments.length !== 1) {
-			throw "exactly one argument is required.";
-		}
-		if (typeof arguments[0] !== "string") {
-			throw "the argument labeled s must represent a string type datum.";
-		}
-		if (s.length > 999) { 
-			throw "the argument labeled s must not exceed 999 characters in length.";
-		}
+
+		// If the DIV web page element whose identifier is "output" does not appear to contain String content, then throw an exception (i.e. error) to normal functioning.
+		if (typeof document.getElementById("output").innerHTML !== "string") throw "missing output web page element.";
+
+		// If s does not represent exactly one function input, then throw an exception (i.e. error) to normal functioning.
+		if (arguments.length !== 1) throw "exactly one argument is required.";
+		
+		// If s is not a String type datum, then throw an exception (i.e. error) to normal functioning.
+		if (typeof arguments[0] !== "string") throw "the argument labeled s must represent a string type datum.";
+		
+		// If s is a string which is longer than 999 characters, then throw an exception (i.e. error) to normal functioning.
+		if (s.length > 999) throw "the argument labeled s must not exceed 999 characters in length.";
+		
+		// Assign a handle variable to its corresponding web page element (i.e. the DIV element whose id attribute is "output").
 		output_html_element = document.getElementById("output");
-		if (s.length === 0) {
-			output_html_element.innerHTML += (p0 + ". . ." + p1);
-		}
+
+		// Append a new paragraph (whose content is s) to the bottom of the content displayed inside of the DIV element whose id attribute is "output".
 		output_html_element.innerHTML += (p0 + s + p1);
 	}
 	catch(error) {
-		console.log("ERROR in print_html_paragraph(s): " + error);
+		// If an error is thrown, then print a corresponding error message to the web browswer console window.
+		console.log("An error occurred in print_html_paragraph(s): " + error);
 	}
-}
-
-function is_nonnegative_integer(n) {
-	if (arguments.length !== 1) return false;
-	if (typeof arguments[0] !== "number") return false;
-	if (Math.floor(n) !== n) return false;
-	if (n < 0) return false;
-	return true;
-}
-
-function increment_natural_number(n) {
-	if (arguments.length !== 1) return 1;
-	n = (is_nonnegative_integer(n)) ? (n + 1) : 1;
-	return n;
 }
