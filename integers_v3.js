@@ -45,3 +45,11 @@ function print_html_paragraph(s) {
 		console.log("An error occurred in print_html_paragraph(s): " + error);
 	}
 }
+
+function is_divisible_by_two(n) {
+
+}
+
+function is_divisible_by_three(n) {
+	
+}
