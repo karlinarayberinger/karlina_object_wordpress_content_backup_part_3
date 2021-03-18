@@ -46,10 +46,18 @@ function print_html_paragraph(s) {
 	}
 }
 
+function is_number(n) {
+	
+}
+
+function is_integer(n) {
+
+}
+
 function is_divisible_by_two(n) {
 
 }
 
 function is_divisible_by_three(n) {
-	
+
 }
