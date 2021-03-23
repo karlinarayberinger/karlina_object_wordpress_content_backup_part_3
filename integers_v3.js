@@ -46,8 +46,28 @@ function print_html_paragraph(s) {
 	}
 }
 
+/**
+ * Determine whether or not some input, n, is a Number type datum.
+ * @param {Number} n is presumed to be a Number type datum.
+ * @return {Boolean} true if n is exactly one Number type datum; false otherwise.
+ */
 function is_number(n) {
-	
+	// Use a try-catch block to respond to specific runtime errors (i.e. exception handling).
+	try {
+		// If n does not represent exactly one datum, then print an error message to the web console and return false.
+		if (arguments.length !== 1) throw "exactly one function input (i.e. argument) is required.";
+
+		// If n does not represent a Number type datum, then print an error message to the web console and return false.
+		if (typeof arguments[0] !== "number") throw "n must represent a Number type datum.";
+
+		// If the function execution made it this far in the code block, then assume that n is a Number type datum and return true.
+		return true;
+	}
+	catch(error) {
+		// If an error is thrown, then print a corresponding error message to the web browswer console window.
+		console.log("An error occurred in is_number(n): " + error);
+		return false;
+	}
 }
 
 function is_integer(n) {
@@ -60,20 +80,4 @@ function is_divisible_by_two(n) {
 
 function is_divisible_by_three(n) {
 
-}
-
-/**
- * Test the print_html_paragraph(s) function using a single String input.
- */
-function unit_test_0() {
-	print_html_paragraph("Hello World!");
-}
-
-/**
- * Test the print_html_paragraph(s) function using three String inputs.
- */
-function unit_test_1() {
-	print_html_paragraph("This is the first paragraph.");
-	print_html_paragraph("This is the second paragraph.");
-	print_html_paragraph("This is the third paragraph.");
 }
