@@ -205,7 +205,7 @@ function generate_factorization_of_n() {
 		prime_factors_array.push(-1);
 		n /= -1;
 	}
-	while (n !== 1) {
+	while (n > 1) {
 		if (is_divisible_by_two(n)) {
 			prime_factors_array.push(2);
 			n /= 2;
