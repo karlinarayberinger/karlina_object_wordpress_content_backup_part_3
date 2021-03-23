@@ -1,5 +1,6 @@
 /**
  * file: binary_to_decimal.js
+ * type: JavaScript
  * author: karbytes
  * date: 23_MARCH_2021
  * license: PUBLIC_DOMAIN
@@ -36,7 +37,7 @@ function remove_non_bit_characters_from_string(s) {
 		if (arguments.length !== 1) throw "exactly one function input is required.";
 		if (typeof arguments[0] !== "string") throw "s must be a String type value.";
 		if (s.length === 0) throw "s appears to be an empty string. Hence, an empty string is returned.";
-		for (i = 0; i < s.length; i += 1) if ((s[i] === '0') || (s[i] !== '1')) output += s[i];
+		for (i = 0; i < s.length; i += 1) if ((s[i] === '0') || (s[i] === '1')) output += s[i];
 		return output;
 	}
 	catch(error) {
@@ -66,4 +67,8 @@ function extract_binary_input_from_text_field() {
 		console.log("An error occurred in extract_binary_input_from_text_field(): " + error);
 		return [0,0,0,0,0,0,0,0];
 	}
+}
+
+function binary_to_decimal() {
+	let y = extract_binary_input_from_text_field();
 }
