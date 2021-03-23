@@ -15,6 +15,10 @@ body {
  	width: 800px;
 }
 
+strong {
+	color: #00ffff;
+}
+
 input {
 	background: #000000;
 	color: #99ff00;

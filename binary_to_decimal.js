@@ -103,5 +103,25 @@ function extract_binary_input_from_text_field() {
  * Convert a sequence of 8 binary digits to its corresponding decimal integer.
  */
 function binary_to_decimal() {
-	let y = extract_binary_input_from_text_field();
+	try {
+		let binary_input = "", decimal_output = 0, calculations_text = "", formula_text = "", i = 0, bit = 0, bit_value = 0;
+		let p0 = ('<' + 'p' + '>'), p1 = ('<' + '/' + 'p' + '>');
+		let s0 = ('<' + 'strong' + '>'), s1 = ('<' + '/' + 'strong' + '>');
+		binary_input = extract_binary_input_from_text_field();
+		while (i < 8) {
+			bit = Number.parseInt(binary_input[i]);
+			bit_value = bit * Math.pow(2, (7 - i));
+			decimal_output += bit_value;
+			calculations_text += (p0 + 'binary_input[0] := ' + s0 + bit + s1 + ' * (2 ^ ' + (7 - i) + ') = ' + s0 + bit_value + s1 + '.' + p1);
+			formula_text += (s0 + bit_value + s1);
+			if (i < 7) formula_text += ' + ';
+			i += 1;
+		}
+		formula_text = (p0 + decimal_output + ' := ' + formula_text + '.' + p1);
+		document.getElementById("decimal_output").innerHTML = decimal_output;
+		document.getElementById("calculations_display").innerHTML = calculations_text + formula_text;
+	}
+	catch(error) {
+		console.log("An error occurred in binary_to_decimal() : " + error);
+	}
 }
