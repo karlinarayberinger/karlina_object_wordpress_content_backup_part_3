@@ -15,12 +15,12 @@
  	<link rel="stylesheet" href="binary_to_decimal.css">
  	<script src="binary_to_decimal.js"></script>
 </head>
-<body>
+<body onload="populate_input_field()">
 	<h1>BINARY_TO_DECIMAL</h1>
 	<p>Convert a sequence of 8 binary digits to its corresponding decimal integer.</p>
 	<p>binary_input := <input type="text" id="binary_sequence">.</p>
 	<p>decimal_output := <span id="decimal_output">???</span>.</p>
-	<p><input type="button" value="binary_to_decimal()" onclick="binary_to_decimal()"></p>
+	<p><input type="button" id="converter_button" value="binary_to_decimal()" onclick="binary_to_decimal()"></p>
 	<div id="calculations_display"><p>???</p></div>
 </body>
 </html>

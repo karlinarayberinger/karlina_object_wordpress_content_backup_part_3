@@ -1,0 +1,44 @@
+/**
+ * file: binary_to_decimal.css
+ * type: Cascading-Style-Sheet
+ * author: karbytes
+ * date: 23_MARCH_2021
+ * license: PUBLIC_DOMAIN
+ */
+
+body {
+ 	background: #000000;
+ 	color: #99ff00;
+ 	font-family: monospace;
+ 	font-size: 16px;
+ 	padding: 10px;
+ 	width: 800px;
+}
+
+input {
+	background: #000000;
+	color: #99ff00;
+	border-color: #99ff00;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 10px;
+	appearance: none;  
+ 	font-family: monospace;
+ 	font-size: 16px;
+}
+
+#binary_sequence {
+	background: #99ff00;
+	color: #000000;
+}
+
+#converter_button {
+	background: #99ff00;
+	color: #000000;
+}
+
+#converter_button:hover {
+	background: #ff9000;
+	color: #000000;
+}

@@ -7,6 +7,36 @@
  */
 
 /**
+ * Generate a randomized sequence of exactly eight binary digits (where each binary digit (i.e. bit) is either '0' or '1').
+ * @return {String} a sequence of exactly 8 binary digits (i.e. byte (which is an abbreviation for binary term)).
+ */
+function generate_random_binary_sequencec_string() {
+	let index = 0, byte_string = "", random_bit = 0;
+	for (index = 0; index < 8; index++) {
+		random_bit = (Math.floor(Math.random() * 100) % 2);
+		byte_string += random_bit;
+	}
+	return byte_string;
+}
+
+/**
+ * Prefill the text field input element whose id is "binary_sequence" with a random byte.
+ * Assume that this function is called when the web page, binary_to_decimal.html, is loaded by the web browser.
+ */
+function populate_input_field() {
+	try {
+		let text_field_input_element = {}, random_byte_string = "";
+		text_field_input_element = document.getElementById("binary_sequence");
+		random_byte_string = generate_random_binary_sequencec_string();
+		text_field_input_element.value = random_byte_string;
+	}
+	catch(error) {
+		console.log("An error occurred in populate_input_field(): " + error);
+		return "";
+	}
+}
+
+/**
  * Remove any space (' ') characters a sequence of characters.
  * @param {String} s is a sequence of zero or more text characters (where each character is a String type value).
  * @return {String} s without any space (' ') characters if s is a nonempty string; otherwise an empty string.
@@ -69,6 +99,9 @@ function extract_binary_input_from_text_field() {
 	}
 }
 
+/**
+ * Convert a sequence of 8 binary digits to its corresponding decimal integer.
+ */
 function binary_to_decimal() {
 	let y = extract_binary_input_from_text_field();
 }
