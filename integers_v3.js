@@ -47,7 +47,7 @@ function print_html_paragraph(s) {
 }
 
 /**
- * Determine whether or not some input, n, is a Number type datum.
+ * Determine whether or not some input, n, represents a Number type datum.
  * @param {Number} n is presumed to be a Number type datum.
  * @return {Boolean} true if n is exactly one Number type datum; false otherwise.
  */
@@ -70,8 +70,31 @@ function is_number(n) {
 	}
 }
 
+/**
+ * Determine whether or not some input, n, represents a Number type datum and base-ten integer.
+ * @param {Number} n is presumed to be a Number type datum and base-ten integer.
+ * @return {Boolean} true if n is exactly one Number type datum and base-ten integer; false otherwise.
+ */
 function is_integer(n) {
+	// Use a try-catch block to respond to specific runtime errors (i.e. exception handling).
+	try {
+		// If n does not represent exactly one datum, then print an error message to the web console and return false.
+		if (arguments.length !== 1) throw "exactly one function input (i.e. argument) is required.";
 
+		// If n does not represent a Number type datum, then print an error message to the web console and return false.
+		if (typeof arguments[0] !== "number") throw "n must represent a Number type datum.";
+
+		// If n does not represent a whole number value, then print an error message to the web console and return false.
+		if (Math.floor(n) !== n) throw "n must represent a whole number value.";
+
+		// If the function execution made it this far in the code block, then assume that n is a Number type datum and base-ten integer and return true.
+		return true;
+	}
+	catch(error) {
+		// If an error is thrown, then print a corresponding error message to the web browswer console window.
+		console.log("An error occurred in is_integer(n): " + error);
+		return false;
+	}
 }
 
 function is_divisible_by_two(n) {
