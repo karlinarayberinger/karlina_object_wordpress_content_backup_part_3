@@ -1,37 +1,20 @@
 <hr>
-
-INTEGERS_V3
-
+<p>INTEGERS_V3</p>
 <hr>
-
-The following single page web application allows the end user to manually enter some input, n, into a text field and to click a button in order to see the factorization of n (if n is a base-ten integer no larger than 23).
-
-The process of factorizing an integer n amounts to identifying the integers which, when multiplied together, produce the product n. 
-
-For example...
-
-n := 21.
-
-prime_factors_array := [3,7,1].
-
-(21 := (3 * 7 * 1)).
-
+<p>The following single page web application allows the end user to manually enter some input, n, into a text field and to click a button in order to see the factorization of n (if n is a base-ten integer no larger than 23).</p>
+<p>The process of factorizing an integer n amounts to identifying the integers which, when multiplied together, produce the product n.</p>
+<p>For example&#8230;</p>
+<p>n := 21.</p>
+<p>prime_factors_array := [3,7,1].</p>
+<p>(21 := (3 * 7 * 1)).</p>
 <hr>
-
-The application consists of the following two code files:
-
-- JavaScript logic: <strong>integers_v3.js</strong> (<a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.js</a>)
-
-- web page interface: <strong>integers_v3.html</strong> (<a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.html</a>)
-
+<p>The application consists of the following two code files:</p>
+<p>&#8211; JavaScript logic: <strong>integers_v3.js</strong> (<a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.js</a>)</p>
+<p>&#8211; web page interface: <strong>integers_v3.html</strong> (<a href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/integers_v3.html</a>)</p>
 <hr>
-
-<strong>JavaScript Code (integers_v3.js)</strong>
-
+<p><strong>JavaScript Code (integers_v3.js)</strong></p>
 <hr>
-
-<pre>
-/**
+<pre>/**
  * file: integers_v3.js
  * type: JavaScript
  * author: karbytes
@@ -47,10 +30,10 @@ function print_html_paragraph(s) {
 	// Use a try-catch block to respond to specific runtime errors (i.e. exception handling).
 	try {
 		// Define the opening paragraph HTML element tag.
-		let p0 = ('<' + 'p' + '>');
+		let p0 = ('&lt;' + 'p' + '&gt;');
 
 		// Define the closing paragraph HTML element tag.
-		let p1 = ('<' + '/' + 'p' + '>');
+		let p1 = ('&lt;' + '/' + 'p' + '&gt;');
 
 		// Declare an empty Object type variable for representing the DIV web page element whose identifier is "output".
 		let output_html_element = {};
@@ -65,7 +48,7 @@ function print_html_paragraph(s) {
 		if (typeof arguments[0] !== "string") throw "the argument labeled s must represent a String type datum.";
 		
 		// If s is a string which is longer than 999 characters, then throw an exception (i.e. error) to normal functioning.
-		if (s.length > 999) throw "the argument labeled s must not exceed 999 characters in length.";
+		if (s.length &gt; 999) throw "the argument labeled s must not exceed 999 characters in length.";
 		
 		// Assign a handle variable to its corresponding web page element (i.e. the DIV element whose id attribute is "output").
 		output_html_element = document.getElementById("output");
@@ -135,7 +118,7 @@ function is_integer(n) {
  * @return {Boolean} true if n represents a base-ten integer less than 23; false otherwise.
  */
 function is_integer_less_than_twenty_three(n) {
-	return (is_integer(n) && (n < 23)) ? true : false;
+	return (is_integer(n) &amp;&amp; (n &lt; 23)) ? true : false;
 }
 
 /**
@@ -171,7 +154,7 @@ function extract_n_from_text_input_field() {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 2; false otherwise.
  */
 function is_divisible_by_two(n) {
-	return (is_integer(n) && ((n % 2) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 2) === 0)) ? true : false;
 }
 
 /**
@@ -179,7 +162,7 @@ function is_divisible_by_two(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 3; false otherwise.
  */
 function is_divisible_by_three(n) {
-	return (is_integer(n) && ((n % 3) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 3) === 0)) ? true : false;
 }
 
 /**
@@ -187,7 +170,7 @@ function is_divisible_by_three(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 5; false otherwise.
  */
 function is_divisible_by_five(n) {
-	return (is_integer(n) && ((n % 5) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 5) === 0)) ? true : false;
 }
 
 /**
@@ -195,7 +178,7 @@ function is_divisible_by_five(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 7; false otherwise.
  */
 function is_divisible_by_seven(n) {
-	return (is_integer(n) && ((n % 7) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 7) === 0)) ? true : false;
 }
 
 /**
@@ -203,7 +186,7 @@ function is_divisible_by_seven(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 11; false otherwise.
  */
 function is_divisible_by_eleven(n) {
-	return (is_integer(n) && ((n % 11) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 11) === 0)) ? true : false;
 }
 
 /**
@@ -211,7 +194,7 @@ function is_divisible_by_eleven(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 13; false otherwise.
  */
 function is_divisible_by_thirteen(n) {
-	return (is_integer(n) && ((n % 13) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 13) === 0)) ? true : false;
 }
 
 /**
@@ -219,7 +202,7 @@ function is_divisible_by_thirteen(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 17; false otherwise.
  */
 function is_divisible_by_seventeen(n) {
-	return (is_integer(n) && ((n % 17) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 17) === 0)) ? true : false;
 }
 
 /**
@@ -227,7 +210,7 @@ function is_divisible_by_seventeen(n) {
  * @return {Boolean} true if n is a base-ten integer which is divisible by 19; false otherwise.
  */
 function is_divisible_by_nineteen(n) {
-	return (is_integer(n) && ((n % 19) === 0)) ? true : false;
+	return (is_integer(n) &amp;&amp; ((n % 19) === 0)) ? true : false;
 }
 
 /**
@@ -237,11 +220,11 @@ function generate_factorization_of_n() {
 	let prime_factors_array = [];
 	let n = extract_n_from_text_input_field();
 	print_html_paragraph("n := " + n + ".");
-	if (n < 0) {
+	if (n &lt; 0) {
 		prime_factors_array.push(-1);
 		n /= -1;
 	}
-	while (n > 1) {
+	while (n &gt; 1) {
 		if (is_divisible_by_two(n)) {
 			prime_factors_array.push(2);
 			n /= 2;
@@ -279,27 +262,24 @@ function generate_factorization_of_n() {
 	print_html_paragraph("prime_factors_array := [" + prime_factors_array + "].");
 }
 </pre>
-
+<hr>
+<p><strong>Hyper-Text-Markup-Language (HTML5) File (integers_v3.html)</strong></p>
+<hr>
+<p>The screenshot image below depicts the HTML5 code which defines the user inteface. To copy-paste the actual code, please visit the raw code link near the top of this page.</p>
 <hr>
 
-<strong>Hyper-Text-Markup-Language (HTML5) File (integers_v3.html)</strong>
+
+<figure class="wp-block-image size-large"><img data-attachment-id="6871" data-permalink="https://karlinaobject.wordpress.com/integers_v3_html_image/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png" data-orig-size="828,490" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_v3_html_image" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png?w=828" src="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png?w=828" alt="" class="wp-image-6871" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png 828w, https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png?w=300 300w, https://karlinaobject.files.wordpress.com/2021/03/integers_v3_html_image.png?w=768 768w" sizes="(max-width: 828px) 100vw, 828px" /></figure>
+
 
 <hr>
-
-The screenshot image below depicts the HTML5 code which defines the user inteface. To copy-paste the actual code, please visit the raw code link near the top of this page.
-
+<p><strong>Web Page Interface Example (screenshot)</strong></p>
 <hr>
 
-<!-- html -->
 
-<hr>
+<figure class="wp-block-image size-large"><img data-attachment-id="6873" data-permalink="https://karlinaobject.wordpress.com/integers_v3_interface_image/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png" data-orig-size="559,363" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="integers_v3_interface_image" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png?w=559" src="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png?w=559" alt="" class="wp-image-6873" srcset="https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png 559w, https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/03/integers_v3_interface_image.png?w=300 300w" sizes="(max-width: 559px) 100vw, 559px" /></figure>
 
-<strong>Web Page Interface Example (screenshot)</strong>
-
-<hr>
-
-<!-- interface -->
 
 <hr>
 <p>This page is current as of 22_MARCH_2021 and is licensed as <a href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a>.</p>
-<hr>
+<hr>	
