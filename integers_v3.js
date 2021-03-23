@@ -123,12 +123,20 @@ function extract_n_from_text_input_field() {
 	}
 }
 
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by two.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 2; false otherwise.
+ */
 function is_divisible_by_two(n) {
-
+	return (is_integer(n) && ((n % 2) === 0)) ? true : false;
 }
 
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by three.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 3; false otherwise.
+ */
 function is_divisible_by_three(n) {
-
+	return (is_integer(n) && ((n % 3) === 0)) ? true : false;
 }
 
 function generate_factorization_of_n() {
