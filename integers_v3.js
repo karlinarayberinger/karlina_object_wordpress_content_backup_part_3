@@ -98,6 +98,14 @@ function is_integer(n) {
 }
 
 /**
+ * Determine whether or not some input, n, represents a Number type datum and base-ten integer less than twenty-three.
+ * @return {Boolean} true if n represents a base-ten integer less than 23; false otherwise.
+ */
+function is_integer_less_than_twenty_three(n) {
+	return (is_integer(n) && (n < 23)) ? true : false;
+}
+
+/**
  * Extract the value which currently exists inside of the text input element whose identifier is "n_input_field".
  * @return {Number} n if n is base-ten integer; 0 otherwise.
  */
@@ -112,6 +120,8 @@ function extract_n_from_text_input_field() {
 
 		// If n does not represent a base-ten integer, then print an error message to the web console and return false.
 		if (!is_integer(n)) throw "n must be an integer.";
+
+		if (!is_integer_less_than_twenty_three(n)) throw "n must be an integer less than 23.";
 
 		// If the function execution made it this far in the code block, then assume that n is a base-ten integer and return n.
 		return n;
@@ -139,7 +149,96 @@ function is_divisible_by_three(n) {
 	return (is_integer(n) && ((n % 3) === 0)) ? true : false;
 }
 
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by five.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 5; false otherwise.
+ */
+function is_divisible_by_five(n) {
+	return (is_integer(n) && ((n % 5) === 0)) ? true : false;
+}
+
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by seven.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 7; false otherwise.
+ */
+function is_divisible_by_seven(n) {
+	return (is_integer(n) && ((n % 7) === 0)) ? true : false;
+}
+
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by eleven.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 11; false otherwise.
+ */
+function is_divisible_by_eleven(n) {
+	return (is_integer(n) && ((n % 11) === 0)) ? true : false;
+}
+
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by thirteen.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 13; false otherwise.
+ */
+function is_divisible_by_thirteen(n) {
+	return (is_integer(n) && ((n % 13) === 0)) ? true : false;
+}
+
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by seventeen.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 17; false otherwise.
+ */
+function is_divisible_by_seventeen(n) {
+	return (is_integer(n) && ((n % 17) === 0)) ? true : false;
+}
+
+/**
+ * Determine whether or not n represents a base-ten integer which is divisible by nineteen.
+ * @return {Boolean} true if n is a base-ten integer which is divisible by 19; false otherwise.
+ */
+function is_divisible_by_nineteen(n) {
+	return (is_integer(n) && ((n % 19) === 0)) ? true : false;
+}
+
 function generate_factorization_of_n() {
+	let prime_factors_array = [];
 	let n = extract_n_from_text_input_field();
 	print_html_paragraph("n := " + n + ".");
+	if (n < 0) {
+		prime_factors_array.push(-1);
+		n /= -1;
+	}
+	while (n !== 1) {
+		if (is_divisible_by_two(n)) {
+			prime_factors_array.push(2);
+			n /= 2;
+		}
+		if (is_divisible_by_three(n)) {
+			prime_factors_array.push(3);
+			n /= 3;
+		}
+		if (is_divisible_by_five(n)) {
+			prime_factors_array.push(5);
+			n /= 5;
+		}
+		if (is_divisible_by_seven(n)) {
+			prime_factors_array.push(7);
+			n /= 7;
+		}
+		if (is_divisible_by_eleven(n)) {
+			prime_factors_array.push(11);
+			n /= 11;
+		}
+		if (is_divisible_by_thirteen(n)) {
+			prime_factors_array.push(13);
+			n /= 13;
+		}
+		if (is_divisible_by_seventeen(n)) {
+			prime_factors_array.push(17);
+			n /= 17;
+		}
+		if (is_divisible_by_nineteen(n)) {
+			prime_factors_array.push(19);
+			n /= 19;
+		}
+	}
+	prime_factors_array.push(n);
+	print_html_paragraph("prime_factors_array := [" + prime_factors_array + "].");
 }
