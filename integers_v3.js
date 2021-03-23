@@ -97,6 +97,22 @@ function is_integer(n) {
 	}
 }
 
+/**
+ * Extract the value which currently exists inside of the text input element whose identifier is "n_input_field".
+ * @return {Number} n if n is base-ten integer; 0 otherwise.
+ */
+function extract_n_from_text_input_field() {
+	// Use a try-catch block to respond to specific runtime errors (i.e. exception handling).
+	try {
+
+	}
+	catch(error) {
+		// If an error is thrown, then print a corresponding error message to the web browswer console window.
+		console.log("An error occurred in extract_n_from_text_input_field(): " + error);
+		return 0;
+	}
+}
+
 function is_divisible_by_two(n) {
 
 }
@@ -106,5 +122,5 @@ function is_divisible_by_three(n) {
 }
 
 function generate_factorization_of_n() {
-	
+
 }
