@@ -197,6 +197,9 @@ function is_divisible_by_nineteen(n) {
 	return (is_integer(n) && ((n % 19) === 0)) ? true : false;
 }
 
+/**
+ * Respond to the event of a button click on the associated web page, integers_v3.html.
+ */
 function generate_factorization_of_n() {
 	let prime_factors_array = [];
 	let n = extract_n_from_text_input_field();
