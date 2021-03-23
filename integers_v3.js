@@ -82,7 +82,7 @@ function is_integer(n) {
 		if (arguments.length !== 1) throw "exactly one function input (i.e. argument) is required.";
 
 		// If n does not represent a Number type datum, then print an error message to the web console and return false.
-		if (is_number(n)) throw "n must represent a Number type datum.";
+		if (!is_number(n)) throw "n must represent a Number type datum.";
 
 		// If n does not represent a whole number value, then print an error message to the web console and return false.
 		if (Math.floor(n) !== n) throw "n must represent a whole number value.";
@@ -105,11 +105,12 @@ function extract_n_from_text_input_field() {
 	// Use a try-catch block to respond to specific runtime errors (i.e. exception handling).
 	try {
 		// Extract the String value (if any) which exists inside of the text field whose id is "n_input_field".
-		let n = document.getElementBy("n_input_field").value;
+		let n = document.getElementById("n_input_field").value;
 
-		// Attempt to convert the String n to its corresponding Number type value (in base-ten).
-		n = Number.parseInt(n);
+		// Attempt to convert the String n to its corresponding Number type value (i.e. a floating point number and not merely an integer).
+		n = Number.parseFloat(n);
 
+		// If n does not represent a base-ten integer, then print an error message to the web console and return false.
 		if (!is_integer(n)) throw "n must be an integer.";
 
 		// If the function execution made it this far in the code block, then assume that n is a base-ten integer and return n.
