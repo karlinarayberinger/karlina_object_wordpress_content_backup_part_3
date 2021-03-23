@@ -2,7 +2,7 @@
  * file: integers_v3.js
  * type: JavaScript
  * author: karbytes
- * date: 17_MARCH_2021
+ * date: 22_MARCH_2021
  * license: PUBLIC_DOMAIN
  */
 
@@ -26,10 +26,10 @@ function print_html_paragraph(s) {
 		if (typeof document.getElementById("output").innerHTML !== "string") throw "missing output web page element.";
 
 		// If s does not represent exactly one function input, then throw an exception (i.e. error) to normal functioning.
-		if (arguments.length !== 1) throw "exactly one argument is required.";
+		if (arguments.length !== 1) throw "exactly one function input (i.e. argument) is required.";
 		
 		// If s is not a String type datum, then throw an exception (i.e. error) to normal functioning.
-		if (typeof arguments[0] !== "string") throw "the argument labeled s must represent a string type datum.";
+		if (typeof arguments[0] !== "string") throw "the argument labeled s must represent a String type datum.";
 		
 		// If s is a string which is longer than 999 characters, then throw an exception (i.e. error) to normal functioning.
 		if (s.length > 999) throw "the argument labeled s must not exceed 999 characters in length.";
@@ -60,4 +60,11 @@ function is_divisible_by_two(n) {
 
 function is_divisible_by_three(n) {
 
+}
+
+/**
+ * Test the print_html_paragraph(s) function using a variety of input values.
+ */
+function unit_test_0() {
+	print_html_paragraph("Hello World!");
 }
