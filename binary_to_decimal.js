@@ -112,7 +112,7 @@ function binary_to_decimal() {
 			bit = Number.parseInt(binary_input[i]);
 			bit_value = bit * Math.pow(2, (7 - i));
 			decimal_output += bit_value;
-			calculations_text += (p0 + 'binary_input[0] := ' + s0 + bit + s1 + ' * (2 ^ ' + (7 - i) + ') = ' + s0 + bit_value + s1 + '.' + p1);
+			calculations_text += (p0 + 'binary_input[' + i + '] := ' + s0 + bit + s1 + ' * (2 ^ ' + (7 - i) + ') = ' + s0 + bit_value + s1 + '.' + p1);
 			formula_text += (s0 + bit_value + s1);
 			if (i < 7) formula_text += ' + ';
 			i += 1;
