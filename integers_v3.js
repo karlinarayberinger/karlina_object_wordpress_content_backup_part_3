@@ -104,3 +104,7 @@ function is_divisible_by_two(n) {
 function is_divisible_by_three(n) {
 
 }
+
+function generate_factorization_of_n() {
+	
+}
