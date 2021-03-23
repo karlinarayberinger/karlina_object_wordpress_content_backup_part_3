@@ -1,41 +1,26 @@
 <hr>
-
-BINARY_TO_DECIMAL
-
+<p>BINARY_TO_DECIMAL</p>
+<hr>
+<p>Convert a sequence of 8 binary digits to its corresponding decimal integer.</p>
 <hr>
 
-Convert a sequence of 8 binary digits to its corresponding decimal integer.
+
+<figure class="wp-block-image size-large"><img data-attachment-id="6881" data-permalink="https://karlinaobject.wordpress.com/binary_to_decimal_interface_image/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png" data-orig-size="758,635" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="binary_to_decimal_interface_image" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png?w=758" src="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png?w=758" alt="" class="wp-image-6881" srcset="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png 758w, https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_interface_image.png?w=300 300w" sizes="(max-width: 758px) 100vw, 758px" /></figure>
+
 
 <hr>
-
-<!-- interface -->
-
+<p><strong>Code Files</strong></p>
 <hr>
-
-<strong>Code Files</strong>
-
+<p>The following open source code files are available to copy for any reason.</p>
+<p>&#8211; Web Page File (Hyper-Text-Markup-Language): <a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/binary_to_decimal.html" target="_blank" rel="noopener">binary_to_decimal.html</a></p>
+<p>&#8211; Stylesheet File (Cascading-Style-Sheet): <a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/binary_to_decimal.css" target="_blank" rel="noopener">binary_to_decimal.css</a></p>
+<p>&#8211; Logic File (JavaScript): <a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/binary_to_decimal.js" target="_blank" rel="noopener">binary_to_decimal.js</a></p>
 <hr>
-
-The following open source code files are available to copy for any reason.
-
-- Web Page File (Hyper-Text-Markup-Language): <a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/binary_to_decimal.html" target="_blank" rel="noopener">binary_to_decimal.html</a>
-
-- Stylesheet File (Cascading-Style-Sheet): <a style="background:#000000;color:#00ff00;" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/binary_to_decimal.css" target="_blank" rel="noopener">binary_to_decimal.css</a>
-
-- Logic File (JavaScript): <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/karlina_object_wordpress_content_backup_part_3/main/binary_to_decimal.js" target="_blank" rel="noopener">binary_to_decimal.js</a>
-
+<p><strong>JavaScript Code (binary_to_decimal.js)</strong></p>
 <hr>
-
-<strong>JavaScript Code (binary_to_decimal.js)</strong>
-
+<p>Scroll horizontally to view hidden code.</p>
 <hr>
-
-Scroll horizontally to view hidden code.
-
-<hr>
-
-<pre>
-/**
+<pre>/**
  * file: binary_to_decimal.js
  * type: JavaScript
  * author: karbytes
@@ -49,7 +34,7 @@ Scroll horizontally to view hidden code.
  */
 function generate_random_binary_sequencec_string() {
 	let index = 0, byte_string = "", random_bit = 0;
-	for (index = 0; index < 8; index++) {
+	for (index = 0; index &lt; 8; index++) {
 		random_bit = (Math.floor(Math.random() * 100) % 2);
 		byte_string += random_bit;
 	}
@@ -84,7 +69,7 @@ function remove_space_characters_from_string(s) {
 		if (arguments.length !== 1) throw "exactly one function input is required.";
 		if (typeof arguments[0] !== "string") throw "s must be a String type value.";
 		if (s.length === 0) throw "s appears to be an empty string. Hence, an empty string is returned.";
-		for (index = 0; index < s.length; index += 1) if (s[index] !== ' ') output += s[index];
+		for (index = 0; index &lt; s.length; index += 1) if (s[index] !== ' ') output += s[index];
 		return output;
 	}
 	catch(error) {
@@ -104,7 +89,7 @@ function remove_non_bit_characters_from_string(s) {
 		if (arguments.length !== 1) throw "exactly one function input is required.";
 		if (typeof arguments[0] !== "string") throw "s must be a String type value.";
 		if (s.length === 0) throw "s appears to be an empty string. Hence, an empty string is returned.";
-		for (i = 0; i < s.length; i += 1) if ((s[i] === '0') || (s[i] === '1')) output += s[i];
+		for (i = 0; i &lt; s.length; i += 1) if ((s[i] === '0') || (s[i] === '1')) output += s[i];
 		return output;
 	}
 	catch(error) {
@@ -124,7 +109,7 @@ function extract_binary_input_from_text_field() {
 		bit_string = remove_space_characters_from_string(bit_string);
 		bit_string = remove_non_bit_characters_from_string(bit_string);
 		if (bit_string.length !== 8) throw "exactly 8 binary digits are required.";
-		for (index = 0; index < 8; index++) {
+		for (index = 0; index &lt; 8; index++) {
 			bit_number = Number.parseInt(bit_string[index]);
 			bit_array.push(bit_number);
 		}
@@ -142,16 +127,16 @@ function extract_binary_input_from_text_field() {
 function binary_to_decimal() {
 	try {
 		let binary_input = "", decimal_output = 0, calculations_text = "", formula_text = "", i = 0, bit = 0, bit_value = 0;
-		let p0 = ('<' + 'p' + '>'), p1 = ('<' + '/' + 'p' + '>');
-		let s0 = ('<' + 'strong' + '>'), s1 = ('<' + '/' + 'strong' + '>');
+		let p0 = ('&lt;' + 'p' + '&gt;'), p1 = ('&lt;' + '/' + 'p' + '&gt;');
+		let s0 = ('&lt;' + 'strong' + '&gt;'), s1 = ('&lt;' + '/' + 'strong' + '&gt;');
 		binary_input = extract_binary_input_from_text_field();
-		while (i < 8) {
+		while (i &lt; 8) {
 			bit = Number.parseInt(binary_input[i]);
 			bit_value = bit * Math.pow(2, (7 - i));
 			decimal_output += bit_value;
 			calculations_text += (p0 + 'binary_input[' + i + '] := ' + s0 + bit + s1 + ' * (2 ^ ' + (7 - i) + ') = ' + s0 + bit_value + s1 + '.' + p1);
 			formula_text += (s0 + bit_value + s1);
-			if (i < 7) formula_text += ' + ';
+			if (i &lt; 7) formula_text += ' + ';
 			i += 1;
 		}
 		formula_text = (p0 + decimal_output + ' := ' + formula_text + '.' + p1);
@@ -163,19 +148,12 @@ function binary_to_decimal() {
 	}
 }
 </pre>
-
 <hr>
-
-<strong>Stylesheet Code (binary_to_decimal.css)</strong>
-
+<p><strong>Stylesheet Code (binary_to_decimal.css)</strong></p>
 <hr>
-
-Scroll horizontally to view hidden code.
-
+<p>Scroll horizontally to view hidden code.</p>
 <hr>
-
-<pre>
-/**
+<pre>/**
  * file: binary_to_decimal.css
  * type: Cascading-Style-Sheet
  * author: karbytes
@@ -224,25 +202,19 @@ input {
 	color: #000000;
 }
 </pre>
-
+<hr>
+<p><strong>Web Page Code (binary_to_decimal.html)</strong></p>
+<hr>
+<p>Because HTML code tends to get corrupted by the WordPress page editor, only an image of the application HTML is shown. (Please use the raw GitHub code link near the top of this page to get the copy-able HTML for this tutorial).</p>
 <hr>
 
-<strong>Web Page Code (binary_to_decimal.html)</strong>
+
+<figure class="wp-block-image size-large"><img data-attachment-id="6884" data-permalink="https://karlinaobject.wordpress.com/binary_to_decimal_html_image-2/" data-orig-file="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png" data-orig-size="837,523" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="binary_to_decimal_html_image" data-image-description="" data-medium-file="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png?w=300" data-large-file="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png?w=837" src="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png?w=837" alt="" class="wp-image-6884" srcset="https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png 837w, https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png?w=150 150w, https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png?w=300 300w, https://karlinaobject.files.wordpress.com/2021/03/binary_to_decimal_html_image.png?w=768 768w" sizes="(max-width: 837px) 100vw, 837px" /></figure>
+
 
 <hr>
-
-Because HTML code tends to get corrupted by the WordPress page editor, only an image of the application HTML is shown. (Please use the raw GitHub code link near the top of this page to get the copy-able HTML for this tutorial).
-
-<hr>
-
-<!-- html -->
-
-<hr>
-
-Thank you for surviving to the end of this tutorial. If you enjoyed this tutorial, please consider making a donation to the author at the following link:
-
-<a style="background:#000000;color:#ff9000;" href="https://www.paypal.com/paypalme/karbytes" target="_blank" rel="noopener">https://www.paypal.com/paypalme/karbytes</a>
-
+<p>Thank you for surviving to the end of this tutorial. If you enjoyed this tutorial, please consider making a donation to the author at the following link:</p>
+<p><a style="background:#000000;color:#ff9000;" href="https://www.paypal.com/paypalme/karbytes" target="_blank" rel="noopener">https://www.paypal.com/paypalme/karbytes</a></p>
 <hr>
 <p>This page is current as of 22_MARCH_2021 and is licensed as <a href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a>.</p>
 <hr>	
