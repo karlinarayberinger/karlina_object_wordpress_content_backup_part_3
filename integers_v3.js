@@ -63,8 +63,17 @@ function is_divisible_by_three(n) {
 }
 
 /**
- * Test the print_html_paragraph(s) function using a variety of input values.
+ * Test the print_html_paragraph(s) function using a single String input.
  */
 function unit_test_0() {
 	print_html_paragraph("Hello World!");
+}
+
+/**
+ * Test the print_html_paragraph(s) function using three String inputs.
+ */
+function unit_test_1() {
+	print_html_paragraph("This is the first paragraph.");
+	print_html_paragraph("This is the second paragraph.");
+	print_html_paragraph("This is the third paragraph.");
 }
